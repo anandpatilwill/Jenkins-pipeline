@@ -114,3 +114,17 @@ For the frontend, we implemented a responsive user interface using HTML, CSS, an
 During the deployment pipeline, we incorporated a Blue-Green deployment strategy to minimize downtime and ensure a smooth transition between different versions of the application. This approach allows us to roll out updates without impacting users, ensuring a seamless experience for our customers."
 
 This example provides specific details about the programming language (Java), the framework (Spring Boot), and other relevant technologies used in the development and deployment of the web application.
+
+
+
+"Hello, my name is Anand Patil, and I am thrilled to be here today. I bring over 15 years of experience in the IT industry, specializing in DevOps practices and Application Deployment. Throughout my career, I have developed expertise in various technologies and methodologies to ensure efficient and seamless software delivery.
+I have spent more than 7 years working on Application Deployment using Jenkins. For instance, in my previous role at one of our major client , I led the implementation of a robust CI/CD pipeline using Jenkins. This pipeline automated the entire software delivery process, from code compilation to deployment, significantly reducing release cycles and improving overall productivity.
+My proficiency lies in orchestrating and automating deployment processes, ensuring reliability and consistency across different environments. Leveraging tools like Docker and Kubernetes has been pivotal in my career. At another client, I successfully containerized our flagship application using Docker, streamlining deployment across various environments. Furthermore, I implemented a Kubernetes-based orchestration for a micro services architecture, achieving scalable and resilient deployments in our cloud-native environment on AWS.
+One of my key strengths is my hands-on experience with Docker and Kubernetes. For example, at another major client , I managed Kubernetes clusters to deploy both stateless and stateful applications. The adoption of containerization strategies significantly enhanced resource utilization and simplified the deployment of complex applications, ensuring a more efficient and reliable production environment.
+I believe in staying at the forefront of technology, and my proficiency in these areas aligns with the must-have requirements mentioned in the job description.
+Additionally, I have a good understanding of Release Management practices. During my tenure at one of our major client , I played a crucial role in establishing effective release management practices. This included version control, release branching strategies, and environment promotion, ensuring smooth transitions from development to production.
+
+
+
+
+
