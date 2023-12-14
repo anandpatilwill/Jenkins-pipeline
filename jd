@@ -20,3 +20,85 @@ I am eager to bring my wealth of experience and passion for DevOps to contribute
 Stateless means each instance is independent and doesn't "remember" anything about previous instances. It's like disposable lunch boxes.
 
 Stateful means each instance has a unique identity and "remembers" its previous state. It's like reusable lunch boxes with name tags.
+
+
+
+pipeline {
+    agent any
+
+    environment {
+        KUBE_NAMESPACE = 'your-namespace' // Replace with your Kubernetes namespace
+        BLUE_DEPLOYMENT = 'lunch-box-blue' // Replace with your blue deployment name
+        GREEN_DEPLOYMENT = 'lunch-box-green' // Replace with your green deployment name
+        BLUE_IMAGE_NAME = 'webapp:blue' // Replace with your blue Docker image name
+        GREEN_IMAGE_NAME = 'webapp:green' // Replace with your green Docker image name
+    }
+
+    stages {
+        stage('Deploy Blue Version') {
+            steps {
+                script {
+                    deployLunchBox(BLUE_DEPLOYMENT, BLUE_IMAGE_NAME)
+                }
+            }
+        }
+
+        stage('Run Tests') {
+            steps {
+                script {
+                    // Run tests to validate the blue version
+                    // Add your testing steps here
+                }
+            }
+        }
+
+        stage('Deploy Green Version') {
+            steps {
+                script {
+                    deployLunchBox(GREEN_DEPLOYMENT, GREEN_IMAGE_NAME)
+                }
+            }
+        }
+
+        stage('Switch Traffic to Green') {
+            steps {
+                script {
+                    switchTraffic(BLUE_DEPLOYMENT, GREEN_DEPLOYMENT)
+                }
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Blue-Green Deployment successful!'
+        }
+    }
+}
+
+def deployLunchBox(deploymentName, imageName) {
+    kubernetesDeploy(
+        kubeconfigId: 'your-kubeconfig-credentials-id', // Replace with your Kubernetes credentials ID
+        configs: 'kubernetes/lunch-box-deployment.yaml', // Path to your Lunch Box Deployment YAML file
+        enableConfigSubstitution: true,
+        verifySSL: true,
+        namespace: "${KUBE_NAMESPACE}",
+        containers: [
+            containerTemplate(
+                name: 'lunch-box-container',
+                image: "${imageName}",
+                ttyEnabled: true
+            )
+        ],
+        name: deploymentName
+    )
+}
+
+def switchTraffic(blueDeployment, greenDeployment) {
+    // Perform traffic switching logic
+    // You might update Kubernetes Services, Ingress controllers, etc.
+    echo "Switching traffic from ${blueDeployment} to ${greenDeployment}"
+    // Add your traffic switching logic here
+}
+
+
