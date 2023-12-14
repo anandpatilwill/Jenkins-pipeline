@@ -1,3 +1,22 @@
 12+ years of total IT experience with more than 6 years of experience on with Application deployment  using UCD and Cloudbees, 
 experience on Docker and k8s is must have. Experience with Release management is good to have. 
 Person should have good understanding of DevOps/DevSecOps principles & practices
+
+
+"Hello, my name is Anand Patil, and I am thrilled to be here today. I bring over 15 years of experience in the IT industry, specializing in DevOps practices and Application Deployment. Throughout my career, I have developed expertise in various technologies and methodologies to ensure efficient and seamless software delivery.
+
+I have spent more than 6 years working on Application Deployment using Jenkins and Maven. My proficiency lies in orchestrating and automating deployment processes, ensuring reliability and consistency across different environments. I take pride in leveraging tools like Docker and Kubernetes to containerize applications and manage scalable, resilient, and efficient deployments in cloud-native environments.
+
+One of my key strengths is my hands-on experience with Docker and Kubernetes, where I have successfully implemented containerization strategies and managed Kubernetes clusters to deploy both stateless and stateful applications. I believe in staying at the forefront of technology, and my proficiency in these areas aligns with the must-have requirements mentioned in the job description.
+
+Additionally, I have a good understanding of Release Management practices, which I consider a valuable asset in ensuring the successful delivery of software products. I thrive in implementing DevOps and DevSecOps principles, promoting collaboration between development and operations teams to achieve continuous integration, delivery, and security.
+
+I am eager to bring my wealth of experience and passion for DevOps to contribute to the success of your team. I look forward to discussing how my skills align with your organization's goals and how I can bring value to the team."
+
+
+
+
+
+Stateless means each instance is independent and doesn't "remember" anything about previous instances. It's like disposable lunch boxes.
+
+Stateful means each instance has a unique identity and "remembers" its previous state. It's like reusable lunch boxes with name tags.
